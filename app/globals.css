@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* --------------------------------------------------------------------------
+   Design tokens — palette derived from the original Dribbble shot
+   (Outcrowd — "Landing page design for a social media management platform")
+   -------------------------------------------------------------------------- */
+@theme {
+  /* Surfaces */
+  --color-paper: #fefefe; /* page card background          */
+  --color-shell: #d4d5da; /* gray backdrop behind the card */
+  --color-surface: #f7f7f8; /* light card / panel background  */
+
+  /* Text */
+  --color-ink: #110c1e; /* near-black text               */
+  --color-muted: #8e8e97; /* secondary text                */
+
+  /* Brand accents */
+  --color-violet: #5b21f0; /* primary buttons, quote marks   */
+  --color-navy: #10026f; /* deep illustration indigo      */
+  --color-rose: #f6449a; /* pink tiles, chart lines       */
+  --color-amber: #ffc629; /* yellow stat tile              */
+  --color-gold: #ffd23f; /* illustration yellow           */
+  --color-orange: #f97316; /* "Users" sticker               */
+  --color-periwinkle: #7a7dee; /* CTA banner background         */
+
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), var(--font-body), ui-sans-serif, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-shell);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Shared page container ---------------------------------------------- */
+@utility container-page {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 3rem;
+  }
+}
