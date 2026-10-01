@@ -13,12 +13,12 @@ const stickerColors = [
  */
 export function Stats() {
   return (
-    <section id="about" className="pb-8">
+    <section id="about" className="scroll-mt-24 pb-8">
       <div className="container-page">
         {stats.map((stat, i) => (
           <article
             key={stat.value}
-            className="grid items-center gap-8 border-b border-ink/10 py-12 md:grid-cols-[236px_1fr_260px] md:gap-12"
+            className="grid items-center gap-6 border-b border-ink/10 py-10 sm:gap-8 lg:grid-cols-[236px_1fr_260px] lg:gap-12"
           >
             <StatTile index={i} />
 
@@ -29,12 +29,12 @@ export function Stats() {
               >
                 {stat.sticker}
               </span>
-              <p className="font-display text-7xl font-light tracking-tight text-ink md:text-8xl lg:text-[150px] lg:leading-none">
+              <p className="font-display text-7xl font-light tracking-tight text-ink sm:text-8xl lg:text-[110px] lg:leading-none xl:text-[150px]">
                 {stat.value}
               </p>
             </div>
 
-            <p className="text-sm leading-relaxed text-ink/80 md:text-right">
+            <p className="text-sm leading-relaxed text-ink/80 lg:text-right">
               {stat.description}
             </p>
           </article>

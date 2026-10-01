@@ -4,11 +4,11 @@ import { cta } from "@/lib/content";
 /** Rounded periwinkle banner with heading, outlined button and artwork. */
 export function CtaBanner() {
   return (
-    <section id="contact" className="pb-14">
+    <section id="contact" className="scroll-mt-24 pb-14">
       <div className="container-page">
-        <div className="relative overflow-hidden rounded-[40px] bg-periwinkle px-8 py-16 md:px-14 md:py-20">
+        <div className="relative overflow-hidden rounded-[40px] bg-periwinkle px-8 py-14 sm:py-16 md:px-14 md:py-20">
           <div className="relative z-10 max-w-md md:max-w-lg">
-            <h2 className="text-center font-display text-4xl leading-[1.15] font-medium tracking-tight text-paper md:text-5xl">
+            <h2 className="text-center font-display text-3xl leading-[1.15] font-medium tracking-tight text-paper sm:text-4xl md:text-5xl">
               {cta.title.map((line, i) => (
                 <span key={line}>
                   {i > 0 && <br />}
@@ -29,8 +29,9 @@ export function CtaBanner() {
             </div>
           </div>
 
-          {/* Megaphone artwork */}
-          <MegaphoneArt className="pointer-events-none absolute -right-10 -bottom-16 w-[340px] md:right-6 md:-bottom-24 md:w-[440px]" />
+          {/* Megaphone artwork — decorative, so it's hidden on phones and
+             capped in the md band to keep clear of the heading and button */}
+          <MegaphoneArt className="pointer-events-none absolute -right-8 -bottom-14 hidden sm:block sm:w-[260px] md:right-6 md:-bottom-24 md:w-[300px] lg:w-[440px]" />
         </div>
       </div>
     </section>

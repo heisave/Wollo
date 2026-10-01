@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section className="pt-14 pb-10 md:pt-20">
       <div className="container-page text-center">
-        <h1 className="mx-auto max-w-4xl font-display text-4xl leading-[1.12] font-medium tracking-tight text-ink md:text-6xl">
+        <h1 className="mx-auto max-w-4xl font-display text-[32px] leading-[1.15] font-medium tracking-tight text-ink sm:text-4xl md:text-6xl">
           {hero.title[0]}
           <br />
           {hero.title[1]}

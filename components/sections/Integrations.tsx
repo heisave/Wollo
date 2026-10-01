@@ -12,22 +12,25 @@ import {
  */
 export function Integrations() {
   return (
-    <section id="integrations" className="relative overflow-hidden py-24 md:py-32">
+    <section
+      id="integrations"
+      className="relative scroll-mt-24 overflow-hidden py-24 md:py-32"
+    >
       <div className="container-page relative">
-        {/* Floating purple envelope */}
-        <EnvelopeIcon className="absolute top-2 left-4 w-20 -rotate-12 md:top-0 md:left-24 md:w-28" />
+        {/* Floating envelope — sits above the heading on phones, beside it ≥sm */}
+        <EnvelopeIcon className="absolute -top-14 left-0 w-14 -rotate-12 sm:top-2 sm:left-4 sm:w-20 md:top-0 md:left-24 md:w-28" />
 
-        {/* Floating yellow app tile (sits behind the heading) */}
+        {/* Floating yellow app tile (sits behind the heading; ≥sm only) */}
         <div
           aria-hidden
-          className="absolute top-1/2 right-2 w-40 -translate-y-1/2 overflow-hidden rounded-[22px] bg-gold md:right-24 md:w-56"
+          className="absolute top-1/2 right-2 hidden w-40 -translate-y-1/2 overflow-hidden rounded-[22px] bg-gold sm:block md:right-24 md:w-56"
         >
           <span className="-ml-3 block font-display text-6xl font-extrabold text-paper md:text-8xl">
             wollo
           </span>
         </div>
 
-        <h2 className="relative text-center font-display text-6xl font-light tracking-tight text-ink md:text-8xl lg:text-9xl">
+        <h2 className="relative text-center font-display text-5xl font-light tracking-tight text-ink sm:text-6xl md:text-8xl lg:text-9xl">
           Integrations
         </h2>
 

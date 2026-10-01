@@ -10,7 +10,7 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="pricing" className="py-20 md:py-28">
+    <section id="pricing" className="scroll-mt-24 py-20 md:py-28">
       <div className="container-page">
         <h2 className="mx-auto max-w-xl text-center font-display text-4xl leading-[1.15] font-medium tracking-tight text-ink md:text-5xl">
           Frequently Asked

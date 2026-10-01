@@ -8,10 +8,10 @@ export function Analytics() {
   return (
     <section
       id="features"
-      className="relative z-10 -mt-10 rounded-t-[40px] bg-paper pt-20 pb-24"
+      className="relative z-10 -mt-10 scroll-mt-24 rounded-t-[40px] bg-paper pt-20 pb-24"
     >
       <div className="container-page">
-        <h2 className="mx-auto max-w-2xl text-center font-display text-4xl leading-[1.15] font-medium tracking-tight text-ink md:text-5xl">
+        <h2 className="mx-auto max-w-2xl text-center font-display text-3xl leading-[1.15] font-medium tracking-tight text-ink sm:text-4xl md:text-5xl">
           Advanced Analytics
           <br />
           and Reporting
@@ -84,7 +84,7 @@ function PerformanceCard() {
 
         {/* Range filter + chart */}
         <div className="min-w-0 flex-1">
-          <div className="inline-flex max-w-full flex-wrap items-center gap-0.5 rounded-full border border-ink/15 bg-paper px-1.5 py-1.5">
+          <div className="inline-flex max-w-full flex-wrap items-center justify-center gap-0.5 rounded-full border border-ink/15 bg-paper px-1.5 py-1.5 md:justify-start">
             {performance.ranges.map((range) => (
               <span
                 key={range}
@@ -165,12 +165,16 @@ function LineChart() {
         </g>
       </svg>
 
-      {/* Black callout pills */}
+      {/* Black callout pills — x/y are viewBox units (440×176), so they
+          are converted to percentages to track the chart at any width. */}
       {performance.callouts.map((callout) => (
         <span
           key={callout.label}
-          className="absolute rounded-full bg-ink px-3 py-1 text-xs text-paper"
-          style={{ left: callout.x, top: callout.y }}
+          className="absolute rounded-full bg-ink px-3 py-1 text-xs whitespace-nowrap text-paper"
+          style={{
+            left: `${(callout.x / 440) * 100}%`,
+            top: `${(callout.y / 176) * 100}%`,
+          }}
         >
           {callout.label}
         </span>
